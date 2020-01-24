@@ -78,7 +78,10 @@ def var_check(x, lower_bound=10, upper_bound=20):
 os.chdir(r"C:\Users\florian.maassen\Desktop\Dashboard\BGB_Dash\Tab1\DOOR_EMEA_MAP")
 
 #Read BGB Doorfile - 22/01/2020
-df = pd.read_csv('Bugaboo_Source_Data.csv')
+#df = pd.read_csv('Bugaboo_Source_Data.csv')
+url = 'https://raw.githubusercontent.com/ftlmmaassen/dash-heroku-template/master/Tab1/DOOR_EMEA_MAP/Bugaboo_Source_Data.csv'
+df=pd.read_csv(url)
+
 
 #Apply sizing and coloring to door dataframe based on func1 and func2
 df['Color_Code'] = df['Door_Classification'].apply(lambda x: return_color(x))
