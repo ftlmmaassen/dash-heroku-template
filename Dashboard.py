@@ -27,11 +27,10 @@ import tab2
 os.chdir(main_directory) 
 import tab3
 
-import requests
-import Image
-from PIL import Image
-import requests
-from io import BytesIO
+
+    # Logo
+image_filename =  os.path.join(main_directory,'bgb_logo.png')
+encoded_image = base64.b64encode(open(image_filename, 'rb').read()).decode('ascii')
 
 
 #==============================================================================
@@ -118,8 +117,14 @@ app.config['suppress_callback_exceptions'] = True
 app.layout = html.Div(children=[
         
         # TITLE BLOCK SUBDIV1
-                    html.Div(#
-                            ),
+                    html.Div([
+                            html.Img(src  = 'data:image/png;base64,{}'.format(encoded_image)
+                    ,style={'height':  '100px', "left": "40px", "top": "17px",
+                            "position":"relative"})], 
+                    style = {'backgroundColor': '#FFFFFF',
+                             "border-radius": "0px",
+                    'padding': '0px 0px 20px 0px',
+                    }),
 
         # TAB DEFINITION BLOCKS SUBDIV2
         
