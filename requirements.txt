@@ -8,3 +8,6 @@ dash-table-experiments
 numpy
 pandas
 plotly
+
+seaborn
+getpass
