@@ -11,7 +11,7 @@ import getpass
 import pandas as pd
 
 
-main_directory = os.chdir(r"C:\\Users\\florian.maassen\\Desktop\\Dashboard\\BGB_Dash\\Tab1\\DOOR_EMEA_MAP")
+#main_directory = os.chdir(r"C:\\Users\\florian.maassen\\Desktop\\Dashboard\\BGB_Dash\\Tab1\\DOOR_EMEA_MAP")
 
 import dash_core_components as dcc
 import dash_html_components as html
@@ -104,8 +104,10 @@ df_c = df.loc[df['Door_Classification'] == 'C']
 ## NUTS LEVEL SELECTED = 2
 ## LIST OF NUTS AVAILABLE ON DRIVE
 
+os.chdir(r"Tab1/DOOR_EMEA_MAP/")
 nutslevel = str(2)
 geojson_filename = 'NUTS_RG_01M_2016_4326_LEVL_'+nutslevel+'.geojson'
+
 with open(geojson_filename) as f:
     jdata = json.load(f)
 
