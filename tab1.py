@@ -10,6 +10,7 @@ import getpass
 
 import pandas as pd
 
+
 main_directory = os.chdir(r"C:\\Users\\florian.maassen\\Desktop\\Dashboard\\BGB_Dash\\Tab1\\DOOR_EMEA_MAP")
 
 import dash_core_components as dcc
@@ -75,7 +76,7 @@ def var_check(x, lower_bound=10, upper_bound=20):
         return (upper_bound + lower_bound) / 2
 
 #set working directory    
-os.chdir(r"C:\Users\florian.maassen\Desktop\Dashboard\BGB_Dash\Tab1\DOOR_EMEA_MAP")
+# os.chdir(r"C:\Users\florian.maassen\Desktop\Dashboard\BGB_Dash\Tab1\DOOR_EMEA_MAP")
 
 #Read BGB Doorfile - 22/01/2020
 #df = pd.read_csv('Bugaboo_Source_Data.csv')
